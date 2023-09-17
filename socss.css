@@ -1,0 +1,425 @@
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to right, #222, #333);
+  color: #fff;
+}
+header {
+  background: #111;
+  padding: 20px 0;
+}
+nav a.active {
+  color: #ff55ff;
+  text-decoration: underline;
+}
+main {
+  padding: 50px;
+}
+.hero {
+  text-align: center;
+}
+h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+.btn {
+  display: inline-block;
+  padding: 15px 30px;
+  background: #ff00ff;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 25px;
+  transition: background 0.3s ease;
+  box-shadow: 0 4px 6px rgb(0, 0, 0, 0.1);
+}
+.btn:hover {
+  background: #ff0066;
+  transform: scale(1.05);
+}
+footer {
+  text-align: center;
+  background: #111;
+  padding: 10px 0;
+}
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+nav li {
+  display: inline;
+  margin-right: 20px;
+  position: relative;
+}
+nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+nav li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #ff00ff;
+  transition: width 0.3s ease;
+}
+nav li:hover a {
+  color: #ff00ff;
+}
+nav li:hover::after {
+  width: 100%;
+}
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+}
+.mySlides {
+  display: none;
+}
+img {
+  width: 100%;
+}
+.dot-container {
+  text-align: center;
+  margin-top: 20px;
+}
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: #ff00ff;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: #ff00ff;
+  cursor: pointer;
+}
+.prev {
+  left: 0;
+}
+.next {
+  right: 0;
+}
+.mySlides img {
+  max-width: 500px;
+  height: 500px;
+}
+.mySlides h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-top: 20px;
+  color: #ff00ff;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: #ff00ff;
+  cursor: pointer;
+}
+.prev {
+  left: 0;
+}
+.next {
+  right: 0;
+}
+footer {
+  text-align: center;
+  background: #111;
+  padding: 10px 0;
+  font-style: italic;
+}
+.mySlides img {
+  max-width: 500px;
+  height: 500px;
+  border: #ff00ff solid 2px;
+  border-radius: 10px;
+}
+#about {
+  padding: 128px 16px;
+  text-align: center;
+}
+#about h3 {
+  color: #800080;
+  font-size: 36px;
+}
+#about p {
+  color: #777;
+  font-size: 18px;
+}
+.w3-quarter {
+  margin-top: 32px;
+}
+.w3-quarter i {
+  font-size: 48px;
+  color: #ff00ff;
+}
+.w3-large {
+  font-weight: bold;
+  font-size: 24px;
+}
+.w3-quarter p:last-child {
+  margin-top: 16px;
+  font-size: 16px;
+}
+.w3-quarter {
+  border: #000 solid 3px;
+  padding: 16px;
+  border-radius: 10px;
+  background-color: transparent;
+  box-shadow: 0 0 0 transparent;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.w3-quarter:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgb(255, 0, 255, 0.8);
+}
+.w3-quarter:hover * {
+  color: #ff0066;
+}
+.neon2 {
+  font-size: 1.5em; /* Reduce the font size by half */
+  color: #ff55ff; /* Pinkish-purple color */
+  text-shadow: 0 0 2px rgba(255, 85, 255, 0.2), 0 0 4px rgba(255, 85, 255, 0.2),
+    0 0 6px rgba(255, 85, 255, 0.2), 0 0 8px rgba(255, 85, 255, 0.2),
+    0 0 10px rgba(255, 85, 255, 0.2), 0 0 12px rgba(255, 85, 255, 0.2),
+    0 0 14px rgba(255, 85, 255, 0.2);
+  animation: flicker 1.5s infinite alternate;
+  text-decoration: underline; /* Underline the text */
+  background-image: linear-gradient(
+    90deg,
+    #ff55ff,
+    #aa00aa
+  ); /* Gradient from pink to purple */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0.1; /* Adjust the opacity as needed */
+  }
+  100% {
+    opacity: 0.8; /* Adjust the opacity as needed */
+  }
+  @keyframes flicker {
+    0% {
+      opacity: 0.1;
+    }
+    100% {
+      opacity: 0.8;
+    }
+    .music-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(
+        90deg,
+        transparent,
+        rgb(255, 255, 255, 0.8),
+        transparent
+      );
+      animation: neon 1s infinite alternate;
+    }
+    .pop {
+      background-color: #ff00ff;
+    }
+    .rap {
+      background-color: #00ff00;
+    }
+    .rock {
+      background-color: #ff0000;
+    }
+  }
+  @keyframes neon {
+    0% {
+      transform: scaleX(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scaleX(1.2);
+      opacity: 0.7;
+    }
+  }
+}
+
+.neon-label {
+  color: #ff00ff;
+}
+
+.neon-input {
+  border: 2px solid #ff00ff;
+  color: #ff00ff;
+}
+
+.neon-btn {
+  background-color: #ff00ff;
+  color: #fff;
+  text-shadow: none;
+}
+
+@keyframes flicker {
+  0% {
+    opacity: 0.1;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+
+.sponsor-main {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.sponsor-image {
+  width: 15%;
+  padding: 30px;
+  margin: 10px 10px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.sponsor-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.faq {
+  background-color: #f9f9f9; /* Light gray background */
+  text-align: left;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.faq h2 {
+  font-size: 28px;
+  color: #333; /* Dark gray text color */
+  margin-bottom: 20px;
+}
+
+/* Style for individual FAQ items */
+.faq-item {
+  margin-bottom: 20px;
+}
+
+.faq-item h3 {
+  font-size: 20px;
+  color: #ff00ff; /* Neon purple for question text */
+}
+
+.faq-item p {
+  font-size: 16px;
+  color: #444; /* Dark gray for answer text */
+}
+
+/* Add hover effect to questions */
+.faq-item h3:hover {
+  text-decoration: underline; /* Underline on hover */
+  cursor: pointer;
+}
+
+/* Add transition effect for hover */
+.faq-item h3,
+.faq-item p {
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+/* Change color on hover */
+.faq-item h3:hover,
+.faq-item h3:focus {
+  color: #ff0066; /* Neon pink on hover */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.top-songs {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+.top-song {
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+  width: 200px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.medal {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: #c0c0c0;
+  border-radius: 50%;
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.gold {
+  background-color: gold;
+  color: black;
+}
+
+.silver {
+  background-color: silver;
+  color: black;
+}
+
+.bronze {
+  background-color: #cd7f32;
+  color: black;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+p {
+  margin: 5px 0;
+}
